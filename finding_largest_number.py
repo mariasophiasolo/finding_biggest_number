@@ -4,7 +4,9 @@
 
 # ask the user to input 3 numbers
 first_number = input("Enter the first number: ")
-print (first_number)
+second_number = input("Enter the second number: ")
+third_number = input("Enter the third number: ")
+
 # second number
 # third number
 
