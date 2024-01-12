@@ -5,7 +5,7 @@ from tkinter import messagebox
 
 window = tk.Tk()
 window.title("Find The Biggest Number")
-window.minsize(width=500, height=500)
+window.minsize(width=355, height=500)
 window.configure(background="black")
 window.resizable(False,False)
 
@@ -26,19 +26,22 @@ def find_and_print_the_biggest_number():
     # Display the result
     result_label.config(text=f"The biggest number is: {biggest_number}")
 
+poster = tk.PhotoImage (file="biggest.png")
+poster_label = tk.Label(image=poster,borderwidth=0)
+poster_label.place(x=0, y=0)
 # print the output
-number1 = tk.Entry(window, width=10)
-number2 = tk.Entry(window, width=10)
-number3 = tk.Entry(window, width=10)
- 
+number1 = tk.Entry(window, width=8)
+number2 = tk.Entry(window, width=8)
+number3 = tk.Entry(window, width=8)
+
+number1.place(x=45, y=50)
+number2.place(x=150, y=50)
+number3.place(x=256,y=50)
+
 find_button = tk.Button (window, text = "Find the Biggest Number", command=find_and_print_the_biggest_number)
+find_button.place (x=30,y=140)
 
 result_label = tk.Label(window, text="")
-
-number1.grid(row=0, column=0, padx=5, pady=5)
-number2.grid(row=0, column=1, padx=5, pady=5)
-number3.grid(row=0, column=2, padx=5, pady=5)
-find_button.grid(row=1, column=0, columnspan=3, pady=10)
-result_label.grid(row=2, column=0, columnspan=3)
+result_label.place(x=30, y=170)
 
 window.mainloop()
